@@ -4,9 +4,9 @@ Stand: 30. August 2026
 
 ## 1. Verantwortlicher
 
-Maxim Zitnikowski
-Kronprinzstraße 6
-32257 Bünde
+Maxim Zitnikowski<br>
+Kronprinzstraße 6<br>
+32257 Bünde<br>
 Deutschland
 
 E-Mail: info@mzitniko.de

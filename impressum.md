@@ -4,14 +4,14 @@ Angaben nach § 18 Abs. 1 MStV und § 5 DDG.
 
 ## Anbieter
 
-Maxim Zitnikowski
-Kronprinzstraße 6
-32257 Bünde
+Maxim Zitnikowski<br>
+Kronprinzstraße 6<br>
+32257 Bünde<br>
 Deutschland
 
 ## Kontakt
 
-E-Mail: info@mzitniko.de
+E-Mail: info@mzitniko.de<br>
 Telefonnummer: +49 176 23776823
 
 ## Verantwortlich für den Inhalt nach § 18 Abs. 2 MStV
