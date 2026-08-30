@@ -1,0 +1,10 @@
+title: SiegelBlick
+description: Siegel-Einträge aus Open Food Facts nachschlagen
+lang: de-DE
+theme: jekyll-theme-minimal
+
+# Interne Arbeitsnotizen gehören nicht auf die veröffentlichte Seite.
+# README.md bleibt im Repository, damit GitHub sie beim Blättern durch
+# docs/ anzeigt — als Webseite ausgeliefert wird sie nicht.
+exclude:
+  - README.md
