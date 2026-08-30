@@ -66,7 +66,7 @@ versuchen Sie es erneut.
 Es gibt kein Konto, kein Tracking und keine Werbung. Übertragen wird nur der
 gescannte Barcode an Open Food Facts. Kamerabilder verlassen das Gerät nicht.
 
-Einzelheiten: «PLATZHALTER: URL der Datenschutzerklärung»
+Einzelheiten in der [Datenschutzerklärung](datenschutz.md).
 
 ## Unabhängigkeit
 

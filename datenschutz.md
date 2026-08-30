@@ -1,6 +1,6 @@
 # Datenschutzerklärung für SiegelBlick
 
-Stand: «PLATZHALTER: Datum der Veröffentlichung»
+Stand: 30. August 2026
 
 ## 1. Verantwortlicher
 
