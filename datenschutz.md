@@ -232,13 +232,43 @@ Zeitpunkt des Downloads und Ihr Gerät. Auf diese Verarbeitung habe ich keinen
 Einfluss; es gilt die Datenschutzerklärung von Apple:
 <https://www.apple.com/legal/privacy/de-ww/>
 
-## 8. Sicherheit
+## 8. Diese Webseite
+
+Die Abschnitte 1 bis 7 beschreiben die **App**. Für die Seiten, auf denen Sie
+diesen Text gerade lesen, gilt zusätzlich Folgendes.
+
+Die Seiten werden über **GitHub Pages** bereitgestellt, einen Dienst der
+GitHub, Inc., 88 Colin P. Kelly Jr. St., San Francisco, CA 94107, USA. Beim
+Aufruf überträgt Ihr Browser technisch notwendige Daten an GitHub,
+insbesondere Ihre **IP-Adresse**, Datum und Uhrzeit, die aufgerufene Adresse
+sowie Browser- und Betriebssystemangaben. GitHub verarbeitet diese Daten in
+eigener Verantwortung, um die Seiten auszuliefern und deren Sicherheit zu
+gewährleisten. Ich habe darauf keinen Zugriff und werte nichts aus.
+
+Es werden **keine Cookies** gesetzt, keine Zählpixel eingebunden, keine
+Schriften oder Skripte von Dritten nachgeladen und keine
+Reichweitenmessung betrieben.
+
+**Übermittlung in die USA:** GitHub ist unter dem EU-U.S. Data Privacy
+Framework zertifiziert (einsehbar unter
+<https://www.dataprivacyframework.gov/>) und stützt Übermittlungen ergänzend
+auf die Standardvertragsklauseln der EU-Kommission nach dem
+Durchführungsbeschluss 2021/914. Für die USA besteht damit ein
+Angemessenheitsbeschluss der Europäischen Kommission.
+
+**Rechtsgrundlage:** Art. 6 Abs. 1 lit. f DSGVO — berechtigtes Interesse an
+einer kostengünstigen, zuverlässigen Bereitstellung dieser Pflichtangaben.
+
+Einzelheiten zur Verarbeitung durch GitHub:
+<https://docs.github.com/site-policy/privacy-policies/github-general-privacy-statement>
+
+## 9. Sicherheit
 
 Die Abfrage bei Open Food Facts erfolgt ausschließlich über eine
 verschlüsselte Verbindung (`https`). Produktbilder werden ebenfalls nur über
 `https` und nur von Hosts unterhalb von `openfoodfacts.org` geladen.
 
-## 9. Änderungen dieser Erklärung
+## 10. Änderungen dieser Erklärung
 
 Ändert sich die App, ändert sich diese Erklärung mit. Maßgeblich ist die
 jeweils unter dieser Adresse abrufbare Fassung; das Datum oben zeigt den
