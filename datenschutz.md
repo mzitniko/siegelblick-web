@@ -1,6 +1,6 @@
 # Datenschutzerklärung für SiegelBlick
 
-Stand: 30. August 2026
+Stand: 14. September 2026
 
 ## 1. Verantwortlicher
 
@@ -22,16 +22,22 @@ Nachhaltigkeitssiegel eingetragen ist.
 
 - Es gibt **kein Nutzerkonto** und keine Registrierung.
 - Es findet **kein Tracking** statt, es werden **keine Werbe-Identifikatoren**
-  verwendet und **keine Analyse- oder Absturzberichte** erhoben.
+  verwendet, und die App selbst erhebt **keine Analyse- oder
+  Absturzberichte**.
+- **Nur Android:** Dort erkennt die Bibliothek ML Kit von Google den Barcode.
+  Sie meldet Google technische Nutzungs- und Diagnosedaten, darunter eine
+  Kennung dieser Installation. Kamerabild und Barcode schickt sie nach
+  Googles Angaben nicht mit (Abschnitt 3.6).
 - Es wird **keine Scan-Historie** geführt — weder auf dem Gerät noch anderswo.
 - **Kamerabilder verlassen das Gerät nicht.** Die Auswertung des Barcodes
   geschieht vollständig auf dem Gerät; es werden keine Fotos gespeichert oder
   übertragen.
-- Auf dem Gerät werden **genau zwei Werte** gespeichert (siehe Abschnitt 3.5).
+- Die App speichert auf dem Gerät **genau zwei Werte** (siehe Abschnitt 3.5).
 
-Personenbezogene Daten verlassen das Gerät nur in den unter 3.1 bis 3.3
-beschriebenen Fällen — im Kern ist das die **IP-Adresse**, die bei jeder
-Verbindung technisch notwendig übertragen wird.
+Personenbezogene Daten verlassen das Gerät nur in den unter 3.1 bis 3.3 und —
+nur auf Android — 3.6 beschriebenen Fällen. Im Kern ist das die
+**IP-Adresse**, die bei jeder Verbindung technisch notwendig übertragen wird,
+auf Android zusätzlich die Kennung aus Abschnitt 3.6.
 
 ## 3. Verarbeitungen im Einzelnen
 
@@ -128,9 +134,10 @@ Die App benötigt Zugriff auf die Kamera, um den Barcode zu lesen. Das System
 fragt Sie vor dem ersten Zugriff um Erlaubnis; Sie können sie jederzeit in den
 Systemeinstellungen widerrufen.
 
-**Die Auswertung geschieht vollständig auf Ihrem Gerät.** Es werden keine
-Fotos, keine Videos und keine Vorschaubilder gespeichert oder übertragen. An
-Open Food Facts geht ausschließlich die erkannte Ziffernfolge, nicht das Bild.
+**Die Auswertung geschieht vollständig auf Ihrem Gerät** — auf iOS mit Apples
+Vision, auf Android mit Googles ML Kit (siehe 3.6). Es werden keine Fotos,
+keine Videos und keine Vorschaubilder gespeichert oder übertragen. An Open
+Food Facts geht ausschließlich die erkannte Ziffernfolge, nicht das Bild.
 
 **Rechtsgrundlage:** Art. 6 Abs. 1 lit. b DSGVO.
 
@@ -146,6 +153,10 @@ Die App speichert lokal auf Ihrem Gerät **genau zwei Werte**:
 Mehr wird nicht gespeichert. Insbesondere keine Scan-Historie, keine Barcodes,
 keine Produktdaten und keine Kennungen.
 
+Auf Android legt die Barcode-Erkennung von Google zusätzlich eine eigene
+Kennung dieser Installation an (Abschnitt 3.6). Die App selbst liest sie
+nicht und hat keinen Einfluss auf sie.
+
 Beide Werte verlassen das Gerät nicht. Sie werden über die
 Systemschnittstelle für App-Einstellungen abgelegt und mit der Deinstallation
 der App gelöscht.
@@ -156,6 +167,55 @@ Bereitstellung der von Ihnen ausdrücklich gewünschten Funktion unbedingt
 erforderlich ist: Ohne den ersten Wert wüsste die App bei jedem Start nicht,
 wonach sie suchen soll, ohne den zweiten liefe die Einführung endlos erneut.
 
+### 3.6 Barcode-Erkennung auf Android (Google ML Kit)
+
+**Betrifft nur die Android-Fassung.** Auf iOS erkennt das Betriebssystem den
+Barcode selbst (Apple Vision); dort findet das Folgende nicht statt.
+
+Auf Android erkennt die Bibliothek **ML Kit** von Google den Barcode, direkt
+auf dem Gerät. Kamerabild und erkannte Ziffernfolge schickt ML Kit nach den
+Bedingungen von Google **nicht** an Google.
+
+ML Kit meldet Google jedoch von sich aus Nutzungs- und Diagnosedaten. Nach
+Googles eigener Offenlegung sind das:
+
+- Geräteangaben: Hersteller, Modell, Android-Version und Build, vorhandene
+  Beschleuniger für maschinelles Lernen
+- App-Angaben: Paketname und App-Version
+- eine **Kennung dieser Installation**, die nach Googles Angaben nicht dazu
+  bestimmt ist, Sie oder Ihr Gerät eindeutig zu identifizieren
+- Angaben zur Erkennung selbst: Dauer, Bildformat und Auflösung, Größe von
+  Ein- und Ausgabe, Version, Art des Ereignisses und Fehlercodes
+- technisch bedingt Ihre **IP-Adresse**
+
+**Zweck:** Google nutzt diese Daten nach eigenen Angaben, um die Leistung von
+ML Kit zu messen, Fehler zu beheben, ML Kit zu warten und zu verbessern und
+Missbrauch zu erkennen.
+
+**Empfänger:** Google LLC, 1600 Amphitheatre Parkway, Mountain View,
+CA 94043, USA. Google verarbeitet diese Daten in eigener Verantwortung. Ich
+erhalte sie nicht und habe keinen Zugriff darauf. Nach Googles Angaben werden
+sie verschlüsselt übertragen und nicht an Dritte weitergegeben.
+
+**Übermittlung in die USA:** Google LLC ist unter dem EU-U.S. Data Privacy
+Framework zertifiziert (einsehbar unter
+<https://www.dataprivacyframework.gov/>). Für die USA besteht damit ein
+Angemessenheitsbeschluss der Europäischen Kommission.
+
+**Rechtsgrundlage:** Art. 6 Abs. 1 lit. f DSGVO. Mein berechtigtes Interesse
+liegt in einer zuverlässigen Barcode-Erkennung, die vollständig auf dem Gerät
+arbeitet und kein Kamerabild übermittelt. Eine Möglichkeit, die Meldung an
+Google abzuschalten, sieht Google nicht vor.
+
+**Speicherdauer und Widerspruch:** Wie lange Google die Daten aufbewahrt,
+entscheidet Google; ich habe darauf keinen Einfluss. Sie können der
+Verarbeitung nach Art. 21 DSGVO widersprechen. Praktisch endet sie, wenn Sie
+die App auf Android nicht mehr verwenden oder deinstallieren.
+
+Einzelheiten bei Google:
+<https://developers.google.com/ml-kit/android-data-disclosure> und in der
+Datenschutzerklärung von Google: <https://policies.google.com/privacy>
+
 ## 4. Was nicht stattfindet
 
 Damit kein Zweifel bleibt — die App verarbeitet **nicht**:
@@ -163,12 +223,15 @@ Damit kein Zweifel bleibt — die App verarbeitet **nicht**:
 - Name, E-Mail-Adresse oder sonstige Kontaktdaten von Ihnen
 - Standortdaten
 - Werbe-Identifikatoren (IDFA/AAID) oder sonstige geräteübergreifende Kennungen
-- Nutzungsstatistiken, Analyse- oder Absturzberichte
+- Nutzungsstatistiken, Analyse- oder Absturzberichte — mit der in
+  Abschnitt 3.6 beschriebenen Ausnahme auf Android
 - Kontakte, Kalender, Fotos oder andere Gerätedaten
 - eine Historie Ihrer Scans
 
 Es findet **kein App-übergreifendes Tracking** statt. Es sind **keine
-Werbe-, Analyse- oder Social-Media-SDKs** eingebunden.
+Werbe-, Analyse- oder Social-Media-SDKs** eingebunden. Die einzige eingebundene
+Bibliothek, die selbst Daten an ihren Hersteller meldet, ist ML Kit in der
+Android-Fassung (Abschnitt 3.6).
 
 ## 5. Speicherdauer und Löschung
 
@@ -189,6 +252,8 @@ entgegenstehen.
 Food Facts entscheidet die Organisation selbst. Ich habe darauf keinen
 Zugriff. Wenden Sie sich für Auskunft oder Löschung dorthin — die Kontaktdaten
 stehen in deren Datenschutzerklärung (siehe 3.1).
+
+**Bei Google (nur Android):** siehe Abschnitt 3.6.
 
 ## 6. Ihre Rechte
 
@@ -211,10 +276,11 @@ meist nur mit dem Hinweis beantworten, dass keine Daten vorliegen
 die App ohne Konto arbeitet.
 
 **Widerruf und Beendigung:** Eine Einwilligung wird nicht eingeholt, weil die
-Verarbeitung nicht darauf beruht — es gibt daher nichts zu widerrufen. Sie
-beenden jede Verarbeitung, indem Sie keinen Barcode mehr scannen, den
-Kamerazugriff in den Systemeinstellungen entziehen oder die App
-deinstallieren.
+Verarbeitung nicht darauf beruht — es gibt daher nichts zu widerrufen. Die
+Abfragen bei Open Food Facts beenden Sie, indem Sie keinen Barcode mehr
+scannen oder den Kamerazugriff in den Systemeinstellungen entziehen; jede
+Verarbeitung, auch die Meldungen von ML Kit auf Android, indem Sie die App
+nicht mehr verwenden oder deinstallieren.
 
 **Beschwerderecht:** Sie können sich bei einer Datenschutz-Aufsichtsbehörde
 beschweren, insbesondere in dem Mitgliedstaat Ihres Aufenthaltsorts, Ihres
@@ -224,13 +290,15 @@ Informationsfreiheit Nordrhein-Westfalen, Kavalleriestr. 2–4,
 40213 Düsseldorf (Postfach 20 04 44, 40102 Düsseldorf),
 <https://www.ldi.nrw.de>.
 
-## 7. Bezug der App über den App Store
+## 7. Bezug der App über App Store und Google Play
 
-Der Bezug der App erfolgt über den App Store von Apple. Dabei verarbeitet
-Apple Daten in eigener Verantwortung — etwa Ihre Apple-Account-Kennung, den
-Zeitpunkt des Downloads und Ihr Gerät. Auf diese Verarbeitung habe ich keinen
-Einfluss; es gilt die Datenschutzerklärung von Apple:
-<https://www.apple.com/legal/privacy/de-ww/>
+Der Bezug der App erfolgt über den App Store von Apple oder über Google Play.
+Dabei verarbeitet der jeweilige Anbieter Daten in eigener Verantwortung —
+etwa Ihre Account-Kennung, den Zeitpunkt des Downloads und Ihr Gerät. Auf
+diese Verarbeitung habe ich keinen Einfluss; es gelten die
+Datenschutzerklärungen von Apple:
+<https://www.apple.com/legal/privacy/de-ww/> und von Google:
+<https://policies.google.com/privacy>
 
 ## 8. Diese Webseite
 

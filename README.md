@@ -1,7 +1,7 @@
 # SiegelBlick — Webseite
 
-Die öffentlichen Seiten zur iOS-App **SiegelBlick**: Datenschutzerklärung,
-Impressum und Hilfe.
+Die öffentlichen Seiten zur App **SiegelBlick** (iOS und Android):
+Datenschutzerklärung, Impressum und Hilfe.
 
 - [Startseite](index.md)
 - [Hilfe und Kontakt](support.md)

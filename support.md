@@ -9,8 +9,8 @@ dort für dieses Produkt ein Nachhaltigkeitssiegel **eingetragen** ist.
 E-Mail: info@mzitniko.de
 
 Ich beantworte Anfragen, so gut es neben einem privaten Projekt geht. Bei
-Fehlermeldungen hilft mir: welches Gerät, welche iOS-Version, welcher Barcode
-und was Sie erwartet hätten.
+Fehlermeldungen hilft mir: welches Gerät, welche iOS- oder Android-Version,
+welcher Barcode und was Sie erwartet hätten.
 
 ## Häufige Fragen
 
@@ -63,8 +63,12 @@ versuchen Sie es erneut.
 
 ## Datenschutz
 
-Es gibt kein Konto, kein Tracking und keine Werbung. Übertragen wird nur der
-gescannte Barcode an Open Food Facts. Kamerabilder verlassen das Gerät nicht.
+Es gibt kein Konto, kein Tracking und keine Werbung. Die App überträgt nur den
+gescannten Barcode an Open Food Facts. Kamerabilder verlassen das Gerät nicht.
+
+Auf Android erkennt Googles ML Kit den Barcode. Es meldet Google technische
+Nutzungs- und Diagnosedaten, darunter eine Kennung der Installation.
+Kamerabild und Barcode schickt es nach Googles Angaben nicht mit.
 
 Einzelheiten in der [Datenschutzerklärung](datenschutz.md).
 
