@@ -1,6 +1,6 @@
 # Datenschutzerklärung für SiegelBlick
 
-Stand: 14. September 2026
+Stand: 15. September 2026
 
 ## 1. Verantwortlicher
 
@@ -49,10 +49,10 @@ auf Android zusätzlich die Kennung aus Abschnitt 3.6.
 
 - der **gescannte Barcode** (die Ziffernfolge der Verpackung)
 - Ihre **IP-Adresse** (technisch notwendig für jede Internetverbindung)
-- ein **User-Agent** mit dem Inhalt `SiegelBlick/1.0.0 (info@mzitniko.de)` —
-  die enthaltene Kontaktadresse ist meine eigene, nicht Ihre; Open Food Facts
-  verlangt sie, um Betreiber von Anwendungen bei technischen Problemen
-  erreichen zu können
+- ein **User-Agent** aus App-Name, Versionsnummer und Kontaktadresse, etwa
+  `SiegelBlick/1.0.4 (info@mzitniko.de)` — die enthaltene Kontaktadresse ist
+  meine eigene, nicht Ihre; Open Food Facts verlangt sie, um Betreiber von
+  Anwendungen bei technischen Problemen erreichen zu können
 
 **Zweck:** Nachschlagen, ob für das Produkt ein Siegel eingetragen ist. Ohne
 diese Übermittlung kann die App ihre einzige Funktion nicht erfüllen.
