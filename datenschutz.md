@@ -1,6 +1,6 @@
 # Datenschutzerklärung für SiegelBlick
 
-Stand: 15. September 2026
+Stand: 30. September 2026
 
 ## 1. Verantwortlicher
 
@@ -32,10 +32,14 @@ Nachhaltigkeitssiegel eingetragen ist.
 - **Kamerabilder verlassen das Gerät nicht.** Die Auswertung des Barcodes
   geschieht vollständig auf dem Gerät; es werden keine Fotos gespeichert oder
   übertragen.
-- Die App speichert auf dem Gerät **genau zwei Werte** (siehe Abschnitt 3.5).
+- Die App speichert auf dem Gerät **genau drei Werte** (siehe Abschnitt 3.5).
+- Sie können **freiwillig melden**, wenn ein Siegel auf der Packung steht,
+  aber kein Eintrag vorliegt. Dabei werden der Barcode und Ihre Auswahl an
+  einen Server in Deutschland übertragen (Abschnitt 3.7). Ohne Ihr Tippen
+  auf „Melden“ geschieht das nicht.
 
-Personenbezogene Daten verlassen das Gerät nur in den unter 3.1 bis 3.3 und —
-nur auf Android — 3.6 beschriebenen Fällen. Im Kern ist das die
+Personenbezogene Daten verlassen das Gerät nur in den unter 3.1 bis 3.3, 3.7
+und — nur auf Android — 3.6 beschriebenen Fällen. Im Kern ist das die
 **IP-Adresse**, die bei jeder Verbindung technisch notwendig übertragen wird,
 auf Android zusätzlich die Kennung aus Abschnitt 3.6.
 
@@ -50,7 +54,7 @@ auf Android zusätzlich die Kennung aus Abschnitt 3.6.
 - der **gescannte Barcode** (die Ziffernfolge der Verpackung)
 - Ihre **IP-Adresse** (technisch notwendig für jede Internetverbindung)
 - ein **User-Agent** aus App-Name, Versionsnummer und Kontaktadresse, etwa
-  `SiegelBlick/1.0.4 (info@mzitniko.de)` — die enthaltene Kontaktadresse ist
+  `SiegelBlick/1.0.7 (info@mzitniko.de)` — die enthaltene Kontaktadresse ist
   meine eigene, nicht Ihre; Open Food Facts verlangt sie, um Betreiber von
   Anwendungen bei technischen Problemen erreichen zu können
 
@@ -143,21 +147,27 @@ Food Facts geht ausschließlich die erkannte Ziffernfolge, nicht das Bild.
 
 ### 3.5 Auf dem Gerät gespeicherte Daten
 
-Die App speichert lokal auf Ihrem Gerät **genau zwei Werte**:
+Die App speichert lokal auf Ihrem Gerät **genau drei Werte**:
 
 1. **Die Auswahl der beobachteten Siegel** — welche der neun Siegel
    nachgeschlagen werden sollen (Schlüssel `enabled_seal_ids`).
 2. **Ein Schalter, ob die Einführung bereits gelaufen ist** — damit sie nicht
    bei jedem Start erscheint (Schlüssel `onboarding_seen`).
+3. **Ein Zähler der heutigen Meldungen** — das heutige Datum und die Anzahl
+   der Meldungen, die Sie heute abgeschickt haben, in der Form `2026-09-30:3`
+   (Schlüssel `meldung_kontingent`). Er begrenzt die Meldungen auf 25 am Tag
+   und verhindert, dass versehentlich in einer Schleife gemeldet wird.
 
 Mehr wird nicht gespeichert. Insbesondere keine Scan-Historie, keine Barcodes,
-keine Produktdaten und keine Kennungen.
+keine Produktdaten und keine Kennungen. **Auch die Barcodes, die Sie gemeldet
+haben, werden nicht gespeichert** — die App merkt sie sich nur, solange sie
+läuft, und vergisst sie beim Beenden.
 
 Auf Android legt die Barcode-Erkennung von Google zusätzlich eine eigene
 Kennung dieser Installation an (Abschnitt 3.6). Die App selbst liest sie
 nicht und hat keinen Einfluss auf sie.
 
-Beide Werte verlassen das Gerät nicht. Sie werden über die
+Diese Werte verlassen das Gerät nicht. Sie werden über die
 Systemschnittstelle für App-Einstellungen abgelegt und mit der Deinstallation
 der App gelöscht.
 
@@ -165,7 +175,9 @@ der App gelöscht.
 ist für diese Speicherung keine Einwilligung erforderlich, da sie zur
 Bereitstellung der von Ihnen ausdrücklich gewünschten Funktion unbedingt
 erforderlich ist: Ohne den ersten Wert wüsste die App bei jedem Start nicht,
-wonach sie suchen soll, ohne den zweiten liefe die Einführung endlos erneut.
+wonach sie suchen soll, ohne den zweiten liefe die Einführung endlos erneut,
+und ohne den dritten ließe sich die Meldegrenze nicht einhalten, die Sie und
+meinen Server vor versehentlichen Mehrfachmeldungen schützt.
 
 ### 3.6 Barcode-Erkennung auf Android (Google ML Kit)
 
@@ -216,6 +228,67 @@ Einzelheiten bei Google:
 <https://developers.google.com/ml-kit/android-data-disclosure> und in der
 Datenschutzerklärung von Google: <https://policies.google.com/privacy>
 
+### 3.7 Meldung eines fehlenden Eintrags (freiwillig)
+
+**Wann:** Nur wenn Sie auf dem Ergebnis-Bildschirm auf „Melden" tippen, im
+Meldeblatt Siegel ankreuzen und dort erneut auf „Melden" tippen. **Ohne diese
+beiden Handlungen wird nichts übertragen.** Die Funktion ist freiwillig; die
+App ist ohne sie vollständig nutzbar.
+
+**Welche Daten:**
+
+- der **gescannte Barcode**
+- die **von Ihnen angekreuzten Siegel** (eine bis neun der bekannten
+  Kennungen)
+- das **Betriebssystem** in der Form `android` oder `ios`
+- die **Version der App**, etwa `1.0.7`
+- Ihre **IP-Adresse** (technisch notwendig für jede Internetverbindung)
+
+**Was nicht übertragen wird:** kein Name, keine E-Mail-Adresse, kein Konto,
+keine Kennung Ihres Geräts, kein Kamerabild, kein Freitext.
+
+**Was gespeichert wird:** Die ersten vier Angaben sowie der Zeitpunkt der
+Meldung. **Ihre IP-Adresse wird nicht gespeichert.** Sie wird für die
+Verbindung benötigt und danach verworfen.
+
+**Zweck:** Open Food Facts wird ehrenamtlich gepflegt und ist lückenhaft. Ihre
+Meldung sagt mir, wo ich nachsehen soll. Ob daraus ein Eintrag wird, prüfe ich
+selbst an der Verpackung; Ihre Meldung wird nicht ungeprüft übernommen.
+
+**Empfänger:** Microsoft Ireland Operations Limited, One Microsoft Place,
+South County Business Park, Leopardstown, Dublin 18, Irland, als mein
+**Auftragsverarbeiter** nach Art. 28 DSGVO. Grundlage ist der
+Datenschutznachtrag von Microsoft für Produkte und Dienste
+(<https://www.microsoft.com/licensing/docs/view/Microsoft-Products-and-Services-Data-Protection-Addendum-DPA>).
+
+Anders als bei Open Food Facts (Abschnitt 3.1) bin **ich** hier der
+Verantwortliche: Die Daten liegen in meinem Speicherkonto, und nur ich lese
+sie.
+
+**Serverstandort:** Deutschland (Azure-Region Germany West Central, Frankfurt
+am Main). Die Daten werden dort gespeichert. Microsoft kann im Rahmen des
+Supports aus Drittländern zugreifen; die Microsoft Corporation ist unter dem
+EU-U.S. Data Privacy Framework zertifiziert, und der Datenschutznachtrag
+enthält zusätzlich die Standardvertragsklauseln.
+
+**Fehlerprotokollierung:** Zur Fehlersuche protokolliert der Dienst technische
+Angaben zu jeder Anfrage (Zeitpunkt, Ergebnis, Laufzeit, Fehlermeldungen).
+Die IP-Adresse wird dabei **nicht gespeichert**; aus ihr werden nur Land und
+Stadt abgeleitet und diese grobe Ortsangabe protokolliert. Die Protokolle
+werden nach 90 Tagen automatisch gelöscht.
+
+**Speicherdauer:** Eine Meldung bleibt gespeichert, bis ich sie bearbeitet
+habe, längstens **zwölf Monate**. Danach lösche ich sie.
+
+**Rechtsgrundlage:** Art. 6 Abs. 1 lit. b DSGVO (Erfüllung des
+Nutzungsverhältnisses — Sie haben die Übermittlung durch das Tippen auf
+„Melden" ausgelöst), hilfsweise Art. 6 Abs. 1 lit. f DSGVO (berechtigtes
+Interesse an der Verbesserung der Datengrundlage, auf der die App beruht).
+
+**Widerspruch und Löschung:** Da die Meldung keine Kennung enthält, kann ich
+sie Ihnen nachträglich nicht zuordnen (Art. 11 DSGVO). Schreiben Sie mir den
+Barcode und den ungefähren Zeitpunkt, lösche ich den Eintrag.
+
 ## 4. Was nicht stattfindet
 
 Damit kein Zweifel bleibt — die App verarbeitet **nicht**:
@@ -226,7 +299,7 @@ Damit kein Zweifel bleibt — die App verarbeitet **nicht**:
 - Nutzungsstatistiken, Analyse- oder Absturzberichte — mit der in
   Abschnitt 3.6 beschriebenen Ausnahme auf Android
 - Kontakte, Kalender, Fotos oder andere Gerätedaten
-- eine Historie Ihrer Scans
+- eine Historie Ihrer Scans — auch nicht der Produkte, die Sie gemeldet haben
 
 Es findet **kein App-übergreifendes Tracking** statt. Es sind **keine
 Werbe-, Analyse- oder Social-Media-SDKs** eingebunden. Die einzige eingebundene
@@ -235,23 +308,29 @@ Android-Fassung (Abschnitt 3.6).
 
 ## 5. Speicherdauer und Löschung
 
-**Auf Ihrem Gerät:** Die beiden Werte aus Abschnitt 3.5 bleiben gespeichert,
+**Auf Ihrem Gerät:** Die drei Werte aus Abschnitt 3.5 bleiben gespeichert,
 bis Sie die App deinstallieren. Danach werden sie vom Betriebssystem
 zusammen mit der App entfernt. Ein Zurücksetzen ohne Deinstallation ist über
 die Einstellungen der App möglich, indem Sie die Siegel-Auswahl wieder auf den
 Ausgangszustand bringen.
 
-**Bei mir:** Es werden **keine** Daten von Ihnen gespeichert. Ich betreibe
-keinen Server, keine Datenbank und kein Analysewerkzeug. Es gibt daher auch
-keine Datensätze, die gelöscht werden könnten. Schreiben Sie mir eine E-Mail,
-verarbeite ich diese natürlich, um sie zu beantworten; sie wird gelöscht,
-sobald der Vorgang abgeschlossen ist und keine Aufbewahrungspflichten
-entgegenstehen.
+**Bei mir:** Gespeichert werden ausschließlich die Meldungen aus Abschnitt 3.7 —
+und auch die nur, wenn Sie ausdrücklich gemeldet haben. Sie bleiben, bis ich sie
+bearbeitet habe, längstens zwölf Monate. Darüber hinaus erhebe ich keine Daten von
+Ihnen: kein Analysewerkzeug, keine Nutzungsstatistik, keine Absturzberichte.
+
+Schreiben Sie mir eine E-Mail, verarbeite ich diese natürlich, um sie zu
+beantworten; sie wird gelöscht, sobald der Vorgang abgeschlossen ist und keine
+Aufbewahrungspflichten entgegenstehen.
 
 **Bei Open Food Facts:** Über Aufbewahrungsfristen auf den Servern von Open
 Food Facts entscheidet die Organisation selbst. Ich habe darauf keinen
 Zugriff. Wenden Sie sich für Auskunft oder Löschung dorthin — die Kontaktdaten
 stehen in deren Datenschutzerklärung (siehe 3.1).
+
+**Bei Microsoft:** Die Meldungen liegen in meinem Speicherkonto in Deutschland;
+Microsoft verarbeitet sie nur in meinem Auftrag und löscht sie auf meine Weisung.
+Die Fehlerprotokolle löscht der Dienst nach 90 Tagen von selbst (Abschnitt 3.7).
 
 **Bei Google (nur Android):** siehe Abschnitt 3.6.
 
