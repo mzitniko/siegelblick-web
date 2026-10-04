@@ -1,29 +1,16 @@
-# SiegelBlick — Webseite
+# SiegelBlick — alte Webseite
 
-Die öffentlichen Seiten zur App **SiegelBlick** (iOS und Android):
-Datenschutzerklärung, Impressum und Hilfe.
+Die Seiten zur App **SiegelBlick** sind umgezogen nach
+<https://mzitniko.de/siegelblick/>.
 
-- [Startseite](index.md)
-- [Hilfe und Kontakt](support.md)
-- [Datenschutzerklärung](datenschutz.md)
-- [Impressum](impressum.md)
+Dieses Repository liefert über GitHub Pages nur noch Weiterleitungen aus, weil
+ältere Fassungen der App hierher verlinken:
 
-Ausgeliefert über GitHub Pages. Der Quelltext der App liegt in einem eigenen
-Repository.
+| Alte Adresse | Neue Adresse |
+|---|---|
+| `mzitniko.github.io/siegelblick-web/` | <https://mzitniko.de/siegelblick/> |
+| `…/support` | <https://mzitniko.de/siegelblick/hilfe/> |
+| `…/datenschutz` | <https://mzitniko.de/siegelblick/datenschutz/> |
+| `…/impressum` | <https://mzitniko.de/siegelblick/impressum/> |
 
-## Was die App macht
-
-SiegelBlick scannt den Barcode einer Lebensmittelverpackung und schlägt bei
-der offenen Datenbank [Open Food Facts](https://world.openfoodfacts.org) nach,
-ob dort für dieses Produkt ein Nachhaltigkeitssiegel **eingetragen** ist.
-
-Ein fehlender Eintrag bedeutet nicht, dass das Produkt kein Siegel trägt — die
-Datenbank wird ehrenamtlich gepflegt und ist lückenhaft. Maßgeblich ist immer
-die Packung.
-
-## Lizenz der Daten
-
-Produktangaben stammen von Open Food Facts und stehen unter der
-[Open Database License (ODbL)](https://opendatacommons.org/licenses/odbl/),
-Produktfotos unter
-[CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/).
+Alle anderen Pfade führen auf die Projektseite.

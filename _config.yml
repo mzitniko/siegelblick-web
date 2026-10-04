@@ -1,9 +1,4 @@
-title: SiegelBlick
-description: Siegel-Einträge aus Open Food Facts nachschlagen
-lang: de-DE
-theme: jekyll-theme-minimal
-
-# README.md beschreibt das Repository und ist auf der Seite selbst
-# überflüssig — index.md sagt dasselbe für Besucher.
+# Die Seite liefert nur noch Weiterleitungen aus (siehe README.md). Die
+# HTML-Dateien haben keinen Front Matter und werden unverändert kopiert.
 exclude:
   - README.md
