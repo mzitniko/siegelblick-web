@@ -9,8 +9,8 @@ Dieses Repository liefert über GitHub Pages nur noch Weiterleitungen aus, weil
 | Alte Adresse | Neue Adresse |
 |---|---|
 | `mzitniko.github.io/siegelblick-web/` | <https://mzitniko.de/siegelblick/> |
-| `…/support` | <https://mzitniko.de/siegelblick/hilfe/> |
-| `…/datenschutz` | <https://mzitniko.de/siegelblick/datenschutz/> |
-| `…/impressum` | <https://mzitniko.de/siegelblick/impressum/> |
+| `…/support` | <https://mzitniko.de/siegelblick/help/> |
+| `…/datenschutz` | <https://mzitniko.de/siegelblick/privacy/> |
+| `…/impressum` | <https://mzitniko.de/siegelblick/imprint/> |
 
 Alle anderen Pfade führen auf die Projektseite.
